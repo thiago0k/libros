@@ -1,0 +1,107 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Añadido para un mejor control del tamaño de los elementos */
+}
+
+body {
+    background-color: #333;
+}
+
+.contenedor-title {
+    background-color: #222;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    line-height: 1.2; /* Ajustado para una mejor legibilidad */
+    font-size: 2rem; /* Tamaño de fuente relativo */
+}
+
+.contenedor-books {
+    display: flex;
+    flex-wrap: wrap; /* Para que los elementos se ajusten en múltiples líneas si es necesario */
+    padding: 20px;
+    justify-content: center; /* Centrar los elementos */
+}
+
+.contenedor-ul {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin: 10px; /* Espaciado entre los elementos */
+}
+
+.image-book {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 200px; /* Limitar el ancho máximo */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin: auto;
+}
+
+.item {
+    font-size: 1rem; /* Tamaño de fuente relativo */
+    background-color: #444;
+    display: flex;
+    flex-wrap: wrap; /* Para que los elementos se ajusten dentro del contenedor */
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Espaciado entre los elementos */
+    padding: 10px; /* Añadido padding para mejor apariencia */
+    position: relative; /* Para el posicionamiento absoluto de los botones */
+}
+
+.item1, .item2 {
+    flex: 1 1 100%; /* Ocupa todo el ancho disponible en dispositivos pequeños */
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-download {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    .contenedor-ul {
+        width: 48%; /* Ajustar para dos columnas en pantallas más grandes */
+    }
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 2.5rem; /* Aumentar el tamaño de fuente en pantallas más grandes */
+    }
+
+    .contenedor-ul {
+        width: 32%; /* Ajustar para tres columnas en pantallas más grandes */
+    }
+
+    .item {
+        flex-direction: row; /* Alinear elementos en fila en pantallas más grandes */
+    }
+
+    .item1, .item2 {
+        flex: 1;
+        margin-top: 0;
+        padding: 10px;
+    }
+}
